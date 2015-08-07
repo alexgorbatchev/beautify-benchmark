@@ -27,6 +27,7 @@ console.log('')
 function add(bench) {
   exports.store.push(bench)
 
+  var id = bench.id;
   var len = (bench.name || (Number.isNaN(id) ? id : '<Test #' + id + '>')).length
   name_maxlen = len > name_maxlen ? len : name_maxlen
   var ops = bench.hz.toFixed(bench.hz < 100 ? 2 : 0)

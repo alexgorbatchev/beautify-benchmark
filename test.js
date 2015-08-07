@@ -37,6 +37,9 @@ suite.add('current', function() {
 .add('random blaaaah', function() {
   return ~getSlowRandom() ? false: true
 })
+.add(function() {
+  return ~getRandom() ? false: true
+})
 .on('cycle', function(event) {
   benchmarks.add(event.target)
 })
